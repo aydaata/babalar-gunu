@@ -275,7 +275,8 @@
             for (let i = 0; i < 12; i++) {
                 const effect = document.createElement("div");
                 effect.className = "effect";
-                effect.innerHTML = Math.random() > 0.5 ? "💖" : "✨";
+                const emojis = ["💖", "✨", "💝"];
+                effect.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 
                 const angle = Math.random() * 2 * Math.PI;
                 const radius = 80 + Math.random() * 40;
